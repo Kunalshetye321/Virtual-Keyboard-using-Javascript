@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Keyboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="forms">
+        <textarea name="textarea" cols="131" rows="12" id="textarea"></textarea>
+    
+
+    <section id="keyboard">
+        <div class="row0">
+                <!-- Coding part -->
+            <script>
+            var str="";
+                for(var i=0;i<10;i++){
+                    str=str+ `<input type="button" style="margin:0 1px;" class="alphaKeyTab" value="${i}" id="${i}" onclick="form.textarea.value += '${i}'">`;
+                }
+                document.write(str);
+            </script>
+            <input type="button" class="alphaKeyTab" value="Del" id="backspace" onclick="form.textarea.value = form.textarea.value.substring(0, form.textarea.value.length-1)">
+        </div>
+        <br>
+        <div class="row1">
+            <!-- Coding part -->
+            <input type="button" class="alphaKeyTab" value="All Clear" id="allclear" onclick="form.textarea.value = ''">
+            <script>
+                var str="";
+                const row0alpha = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
+                 for(var i=0;i<row0alpha.length;i++){
+                     str=str+ `<input type="button" style="margin:0 1px;" class="alphaKeyTab" value="${row0alpha[i]}" id="${row0alpha[i]}"" onclick="form.textarea.value += '${row0alpha[i]}'">`;
+                 }
+                 document.write(str);
+             </script>
+        </div>
+        <br>
+        <div class="row2">
+            <!-- Coding part -->
+           <script>
+                var str="";
+                const row1alpha = ["A","S","D","F","G","H","J","K","L"];
+                 for(var i=0;i<row1alpha.length;i++){
+                     str=str+ `<input type="button" style="margin:0 1px;" class="alphaKeyTab" value="${row1alpha[i]}" id="${row1alpha[i]}"" onclick="form.textarea.value += '${row1alpha[i]}'">`;
+                 }
+                 document.write(str);
+             </script>
+        </div>
+        <br>
+        <div class="row3">
+            <!-- Coding part -->
+            <input type="button" class="alphaKeyTab" value="\n" id="newline" onclick="form.textarea.value = myFun(form.textarea.value)">
+            <script>
+                var str="";
+                const row2alpha = ["Z","X","C","V","B","N","M"];
+                 for(var i=0;i<row2alpha.length;i++){
+                     str=str+ `<input type="button" style="margin:0 1px;" class="alphaKeyTab" value="${row2alpha[i]}" id="${row2alpha[i]}"" onclick="form.textarea.value += '${row2alpha[i]}'">`;
+                 }
+                 document.write(str);
+             </script>
+        </div>
+        <br>
+        <div class="row4">
+            <input type="button" class="alphaKeyTab" value="⎵" id="spacetab" onclick="form.textarea.value += ' '">
+        </div>
+    </section>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>
